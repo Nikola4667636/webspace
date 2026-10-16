@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Планеты</title>
+  <link rel="stylesheet" href="../static/css/base.css">
+  <link rel="stylesheet" href="../static/css/planets.css">
+  <script src="../static/js/theme.js" defer></script>
+  <script src="../static/js/planets.js" defer></script>
+</head>
+<body>
+  <header class="header">
+    <a class="brand" href="./index.html">Космос</a>
+    <nav class="nav">
+      <a href="./index.html">Главная</a>
+      <a class="active" href="./planets.html">Планеты</a>
+      <a href="./missions.html">Миссии</a>
+    </nav>
+    <button id="theme" class="button secondary" type="button">Сменить тему</button>
+  </header>
+
+  <main>
+    <div class="page-head">
+      <h1>Планеты</h1>
+      <p>Выберите планету, чтобы узнать о ней больше.</p>
+    </div>
+
+    <div class="tabs">
+      <button class="tab active" type="button">Земля</button>
+      <button class="tab" type="button">Марс</button>
+      <button class="tab" type="button">Юпитер</button>
+      <button class="tab" type="button">Сатурн</button>
+    </div>
+
+    <section class="card planet">
+      <img id="planet-image" src="../static/images/planet-earth.svg" alt="Земля">
+      <div class="planet-info">
+        <h2 id="planet-name">Земля</h2>
+        <p id="planet-lead" class="lead">Наш дом и единственная известная планета с жизнью.</p>
+        <ul id="planet-facts" class="facts">
+          <li>Диаметр: около 12 742 км</li>
+          <li>Спутник: Луна</li>
+          <li>Около 71% поверхности покрыто водой</li>
+        </ul>
+        <p id="planet-more" class="more hidden">Земля защищена магнитным полем и атмосферой из азота и кислорода, поэтому на ней возможна жизнь.</p>
+        <div class="planet-buttons">
+          <button id="more" class="button" type="button">Подробнее</button>
+          <button id="next" class="button secondary" type="button">Следующая планета</button>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <p>Космос, 2026</p>
+  </footer>
+</body>
+</html>

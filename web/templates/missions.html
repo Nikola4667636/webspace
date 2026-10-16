@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Миссии</title>
+  <link rel="stylesheet" href="../static/css/base.css">
+  <link rel="stylesheet" href="../static/css/missions.css">
+  <script src="../static/js/theme.js" defer></script>
+  <script src="../static/js/missions.js" defer></script>
+</head>
+<body>
+  <header class="header">
+    <a class="brand" href="./index.html">Космос</a>
+    <nav class="nav">
+      <a href="./index.html">Главная</a>
+      <a href="./planets.html">Планеты</a>
+      <a class="active" href="./missions.html">Миссии</a>
+    </nav>
+    <button id="theme" class="button secondary" type="button">Сменить тему</button>
+  </header>
+
+  <main>
+    <div class="page-head">
+      <h1>Миссии</h1>
+      <p>Главные события в истории освоения космоса.</p>
+    </div>
+
+    <div class="tabs">
+      <button class="tab active" type="button" data-filter="all">Все</button>
+      <button class="tab" type="button" data-filter="crew">С экипажем</button>
+      <button class="tab" type="button" data-filter="auto">Автоматические</button>
+    </div>
+
+    <p class="counter">Показано миссий: <span id="count">6</span></p>
+
+    <ul class="timeline">
+      <li class="card mission" data-type="auto">
+        <div class="mission-top">
+          <span class="year">1957</span>
+          <span class="badge">Автоматическая</span>
+        </div>
+        <h3>Спутник-1</h3>
+        <p>Первый искусственный спутник Земли.</p>
+        <p class="mission-more hidden">Запущен 4 октября 1957 года в СССР. Шар диаметром 58 см передавал радиосигналы, которые слушали по всему миру.</p>
+        <button class="button" type="button">Подробнее</button>
+      </li>
+      <li class="card mission" data-type="crew">
+        <div class="mission-top">
+          <span class="year">1961</span>
+          <span class="badge">С экипажем</span>
+        </div>
+        <h3>Юрий Гагарин</h3>
+        <p>Первый человек в космосе.</p>
+        <p class="mission-more hidden">12 апреля 1961 года Юрий Гагарин облетел Землю за 108 минут на корабле «Восток-1».</p>
+        <button class="button" type="button">Подробнее</button>
+      </li>
+      <li class="card mission" data-type="crew">
+        <div class="mission-top">
+          <span class="year">1969</span>
+          <span class="badge">С экипажем</span>
+        </div>
+        <h3>Аполлон-11</h3>
+        <p>Первые люди на Луне.</p>
+        <p class="mission-more hidden">20 июля 1969 года Нил Армстронг и Базз Олдрин высадились на Луне, а Майкл Коллинз ждал их на орбите.</p>
+        <button class="button" type="button">Подробнее</button>
+      </li>
+      <li class="card mission" data-type="auto">
+        <div class="mission-top">
+          <span class="year">1977</span>
+          <span class="badge">Автоматическая</span>
+        </div>
+        <h3>Вояджер-1</h3>
+        <p>Самый далёкий рукотворный объект.</p>
+        <p class="mission-more hidden">Зонд запущен в 1977 году, в 2012 году вышел в межзвёздное пространство и до сих пор передаёт данные.</p>
+        <button class="button" type="button">Подробнее</button>
+      </li>
+      <li class="card mission" data-type="auto">
+        <div class="mission-top">
+          <span class="year">1990</span>
+          <span class="badge">Автоматическая</span>
+        </div>
+        <h3>Телескоп Хаббл</h3>
+        <p>Космический телескоп, который изменил астрономию.</p>
+        <p class="mission-more hidden">Телескоп работает на орбите Земли с 1990 года и сделал снимки далёких галактик и туманностей.</p>
+        <button class="button" type="button">Подробнее</button>
+      </li>
+      <li class="card mission" data-type="auto">
+        <div class="mission-top">
+          <span class="year">2021</span>
+          <span class="badge">Автоматическая</span>
+        </div>
+        <h3>Персеверанс</h3>
+        <p>Марсоход, который ищет следы древней жизни.</p>
+        <p class="mission-more hidden">Марсоход сел в кратер Езеро 18 февраля 2021 года и собирает образцы грунта для будущей доставки на Землю.</p>
+        <button class="button" type="button">Подробнее</button>
+      </li>
+    </ul>
+  </main>
+
+  <footer class="footer">
+    <p>Космос, 2026</p>
+  </footer>
+</body>
+</html>
