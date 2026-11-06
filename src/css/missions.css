@@ -1,0 +1,159 @@
+.counter {
+  margin: 0 0 20px;
+  color: var(--muted);
+}
+
+.timeline {
+  margin: 0;
+  padding: 0 0 0 28px;
+  list-style: none;
+  border-left: 2px solid var(--border);
+}
+
+.mission {
+  position: relative;
+  margin-bottom: 20px;
+}
+
+.mission::before {
+  content: "";
+  position: absolute;
+  top: 30px;
+  left: -37px;
+  width: 16px;
+  height: 16px;
+  background: var(--accent);
+  border: 3px solid var(--bg);
+  border-radius: 50%;
+}
+
+.mission-top {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 12px;
+}
+
+.year {
+  font-weight: 700;
+  letter-spacing: 0.05em;
+  color: var(--accent2);
+}
+
+.badge {
+  padding: 2px 12px;
+  font-size: 13px;
+  color: var(--muted);
+  border: 1px solid var(--border);
+  border-radius: 12px;
+}
+
+.mission h3 {
+  margin: 6px 0;
+  font-size: 24px;
+}
+
+.mission p {
+  margin: 0 0 14px;
+  color: var(--muted);
+}
+
+.mission .mission-more {
+  color: var(--text);
+}
+
+.mission .button {
+  padding: 6px 18px;
+  font-size: 15px;
+}
+
+.toolbar {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: flex-end;
+  gap: 14px;
+  margin-bottom: 20px;
+}
+
+.field {
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+  gap: 4px;
+  min-width: 200px;
+  font-size: 14px;
+  color: var(--muted);
+}
+
+.field input,
+.field select {
+  padding: 10px 14px;
+  font: inherit;
+  color: var(--text);
+  background: var(--card);
+  border: 1px solid var(--border);
+  border-radius: 14px;
+}
+
+.field input:focus,
+.field select:focus {
+  outline: none;
+  border-color: var(--accent);
+}
+
+.field select option {
+  color: #1b2145;
+}
+
+.button:disabled {
+  opacity: 0.5;
+  cursor: wait;
+  transform: none;
+}
+
+.status {
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+.status p {
+  margin: 0 0 14px;
+}
+
+.status p:last-child {
+  margin-bottom: 0;
+}
+
+.status.error {
+  border-color: var(--accent2);
+}
+
+.spinner {
+  display: inline-block;
+  width: 28px;
+  height: 28px;
+  margin-bottom: 10px;
+  border: 3px solid var(--border);
+  border-top-color: var(--accent);
+  border-radius: 50%;
+  animation: spin 0.9s linear infinite;
+}
+
+@keyframes spin {
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+.launch-image {
+  display: block;
+  width: 100%;
+  max-height: 200px;
+  margin: 8px 0 12px;
+  object-fit: cover;
+  border-radius: 12px;
+}
+
+.mission-more p {
+  margin: 0 0 6px;
+}

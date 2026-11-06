@@ -1,9 +1,13 @@
-const imagesPath = "../static/images/";
+// Images are imported so Vite can bundle them and fix paths for any base URL
+import earthImage from "../images/planet-earth.svg";
+import marsImage from "../images/planet-mars.svg";
+import jupiterImage from "../images/planet-jupiter.svg";
+import saturnImage from "../images/planet-saturn.svg";
 
 const planets = [
   {
     name: "Земля",
-    image: "planet-earth.svg",
+    image: earthImage,
     lead: "Наш дом и единственная известная планета с жизнью.",
     facts: [
       "Диаметр: около 12 742 км",
@@ -14,7 +18,7 @@ const planets = [
   },
   {
     name: "Марс",
-    image: "planet-mars.svg",
+    image: marsImage,
     lead: "Красная планета с ржавой пылью на поверхности.",
     facts: [
       "Диаметр: около 6 779 км",
@@ -25,7 +29,7 @@ const planets = [
   },
   {
     name: "Юпитер",
-    image: "planet-jupiter.svg",
+    image: jupiterImage,
     lead: "Самая большая планета Солнечной системы.",
     facts: [
       "Диаметр: около 140 000 км",
@@ -36,7 +40,7 @@ const planets = [
   },
   {
     name: "Сатурн",
-    image: "planet-saturn.svg",
+    image: saturnImage,
     lead: "Планета с самыми яркими кольцами.",
     facts: [
       "Диаметр: около 116 500 км",
@@ -62,7 +66,7 @@ function showPlanet(index) {
   current = index;
   const planet = planets[index];
 
-  planetImage.src = imagesPath + planet.image;
+  planetImage.src = planet.image;
   planetImage.alt = planet.name;
   planetName.textContent = planet.name;
   planetLead.textContent = planet.lead;

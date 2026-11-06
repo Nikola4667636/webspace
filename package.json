@@ -1,0 +1,17 @@
+{
+  "name": "webspace",
+  "private": true,
+  "version": "1.0.0",
+  "type": "module",
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build",
+    "preview": "vite preview"
+  },
+  "devDependencies": {
+    "vite": "^6.0.0"
+  },
+  "dependencies": {
+    "node": "^27.0.0-alpha.0.0.0"
+  }
+}

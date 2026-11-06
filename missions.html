@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Миссии</title>
+  <link rel="stylesheet" href="/src/css/base.css">
+  <link rel="stylesheet" href="/src/css/missions.css">
+  <script type="module" src="/src/js/theme.js"></script>
+  <script type="module" src="/src/js/missions.js"></script>
+</head>
+<body>
+  <header class="header">
+    <a class="brand" href="./index.html">Космос</a>
+    <nav class="nav">
+      <a href="./index.html">Главная</a>
+      <a href="./planets.html">Планеты</a>
+      <a class="active" href="./missions.html">Миссии</a>
+    </nav>
+    <button id="theme" class="button secondary" type="button">Сменить тему</button>
+  </header>
+
+  <main>
+    <div class="page-head">
+      <h1>Миссии</h1>
+      <p>Последние запуски ракет со всего мира. Данные: Launch Library 2 (The Space Devs).</p>
+    </div>
+
+    <div class="toolbar" role="search">
+      <label class="field">
+        <span>Поиск</span>
+        <input id="search" type="search" placeholder="Title" autocomplete="off">
+      </label>
+      <label class="field">
+        <span>Оператор</span>
+        <select id="category">
+          <option value="all">Все</option>
+        </select>
+      </label>
+      <button id="refresh" class="button" type="button">Обновить</button>
+    </div>
+
+    <p class="counter">Показано запусков: <span id="count">0</span></p>
+
+    <div id="status" class="card status hidden" aria-live="polite"></div>
+
+    <ul id="launch-list" class="timeline"></ul>
+  </main>
+
+  <footer class="footer">
+    <p>Космос, 2026</p>
+  </footer>
+</body>
+</html>
