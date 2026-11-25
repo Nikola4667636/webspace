@@ -1,7 +1,7 @@
 # Космос
 Можно открыть: https://nikola4667636.github.io/webspace/index.html
 
-Учебный сайт про космос на Vite (Vanilla + JavaScript). Три страницы: главная, планеты, миссии.
+Учебный сайт про космос. Три страницы: главная, планеты, миссии.
 
 ## Участники
 
@@ -27,6 +27,15 @@
   - ошибка — понятное сообщение и кнопка «Повторить попытку».
 - Проверяется `response.ok`: ответы HTTP 404, 429 и 500 считаются ошибкой.
 
+## ДЗ №3 (React + TypeScript)
+
+Проект переписан на React и TypeScript (Vite), стили: CSS Modules.
+
+- Все три страницы стали компонентами, навигация через `react-router-dom` (`HashRouter`, работает на GitHub Pages при любом имени репозитория).
+- Функциональность ДЗ №1 и №2 сохранена: темы, вкладки планет, «Подробнее» / «Скрыть», поиск, выбор оператора, обновление, состояния загрузки, пустого результата и ошибки с повтором.
+- Типизированы ответ API, модель запуска и пропсы компонентов.
+- Логика вынесена в хуки: `useLaunches`, `useTheme`, `useDebouncedValue`.
+
 ## Запуск и сборка
 
 ```bash
@@ -35,6 +44,7 @@ npm run dev        # режим разработки, http://localhost:5173
 npm run build      # сборка в папку dist
 npm run preview    # просмотр собранной версии
 ```
+Нужен Node.js 18 или новее.
 
 ## Публикация на GitHub Pages
 
@@ -45,9 +55,10 @@ npm run preview    # просмотр собранной версии
 ## Структура
 
 ```
-index.html, planets.html, missions.html   страницы (точки входа Vite)
-src/css/                                  стили
-src/js/                                   theme.js, planets.js, missions.js
-src/images/                               SVG-изображения
-vite.config.js                            multi-page конфиг
+src/api/          запрос к API, типы, кэш, сообщения об ошибках
+src/hooks/        useLaunches, useTheme, useDebouncedValue
+src/components/   Layout, Button, LaunchCard, StatusBox и др.
+src/pages/        Home, Planets, Missions
+src/data/         данные планет
+src/images/       SVG
 ```

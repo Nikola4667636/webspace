@@ -1,0 +1,61 @@
+:root {
+  --bg: #0b1026;
+  --bg2: #1a1f4a;
+  --header: rgba(11, 16, 38, 0.85);
+  --text: #e8ebff;
+  --muted: #a3aad4;
+  --card: rgba(255, 255, 255, 0.07);
+  --border: rgba(255, 255, 255, 0.14);
+  --accent: #7c9cff;
+  --accent2: #ff8fb1;
+}
+
+body.light {
+  --bg: #f3f5ff;
+  --bg2: #dfe5ff;
+  --header: rgba(243, 245, 255, 0.9);
+  --text: #1b2145;
+  --muted: #58608f;
+  --card: #ffffff;
+  --border: #d3d9f5;
+  --accent: #4a5fd6;
+  --accent2: #d6457a;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  min-height: 100vh;
+  font-family: "Segoe UI", Roboto, Arial, sans-serif;
+  line-height: 1.6;
+  color: var(--text);
+  background: linear-gradient(160deg, var(--bg), var(--bg2)) fixed;
+}
+
+body::before {
+  content: "";
+  position: fixed;
+  inset: 0;
+  z-index: -1;
+  pointer-events: none;
+  opacity: 0.6;
+  background-image:
+    radial-gradient(1px 1px at 20px 30px, #ffffff, transparent),
+    radial-gradient(1px 1px at 120px 90px, #ffffff, transparent),
+    radial-gradient(2px 2px at 210px 160px, #ffffff, transparent),
+    radial-gradient(1px 1px at 70px 170px, #ffffff, transparent);
+  background-size: 250px 200px;
+}
+
+body.light::before {
+  opacity: 0;
+}
+
+#root {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}

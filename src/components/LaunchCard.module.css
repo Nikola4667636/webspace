@@ -1,0 +1,65 @@
+.mission {
+  position: relative;
+  margin-bottom: 20px;
+}
+
+.mission::before {
+  content: "";
+  position: absolute;
+  top: 30px;
+  left: -37px;
+  width: 16px;
+  height: 16px;
+  background: var(--accent);
+  border: 3px solid var(--bg);
+  border-radius: 50%;
+}
+
+.top {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 12px;
+}
+
+.date {
+  font-weight: 700;
+  letter-spacing: 0.05em;
+  color: var(--accent2);
+}
+
+.badge {
+  padding: 2px 12px;
+  font-size: 13px;
+  color: var(--muted);
+  border: 1px solid var(--border);
+  border-radius: 12px;
+}
+
+.mission h3 {
+  margin: 6px 0;
+  font-size: 24px;
+}
+
+.mission p {
+  margin: 0 0 14px;
+  color: var(--muted);
+}
+
+.more {
+  color: var(--text);
+}
+
+.more p {
+  margin: 0 0 6px;
+  color: var(--text);
+}
+
+.image {
+  display: block;
+  width: 100%;
+  max-height: 200px;
+  margin: 8px 0 12px;
+  object-fit: cover;
+  border-radius: 12px;
+}

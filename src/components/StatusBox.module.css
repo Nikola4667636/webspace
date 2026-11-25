@@ -1,0 +1,33 @@
+.status {
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+.status p {
+  margin: 0 0 14px;
+}
+
+.status p:last-child {
+  margin-bottom: 0;
+}
+
+.error {
+  border-color: var(--accent2);
+}
+
+.spinner {
+  display: inline-block;
+  width: 28px;
+  height: 28px;
+  margin-bottom: 10px;
+  border: 3px solid var(--border);
+  border-top-color: var(--accent);
+  border-radius: 50%;
+  animation: spin 0.9s linear infinite;
+}
+
+@keyframes spin {
+  to {
+    transform: rotate(360deg);
+  }
+}
